@@ -33,9 +33,6 @@ int main()
     // Initialise the micro:bit runtime.
     uBit.init();
 
-    // Setup a simple triangular waveform.
-    MicroBitImage img("1 0 0 0 0 0 0 0 0 1\n0 1 0 0 0 0 0 0 1 0\n0 0 1 0 0 0 0 1 0 0\n0 0 0 1 0 0 1 0 0 0\n0 0 0 0 1 1 0 0 0 0\n");
-
     MicroBitFlash flash;
     uint32_t buffer1 = 0x12345678;
     uint32_t buffer2 = 0x87654321;
