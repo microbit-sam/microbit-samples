@@ -33,38 +33,7 @@ int main()
     // Initialise the micro:bit runtime.
     uBit.init();
 
-    MicroBitFlash flash;
-    uint32_t buffer1 = 0x12345678;
-    uint32_t buffer2 = 0x87654321;
-
-    int result = 0;
-
-    // Write Buffer 1
-    for(uint32_t x = 0x20000; x < 0x20100; x = x +4){
-        result = flash.flash_write((uint32_t *)x, &buffer1, sizeof(buffer1));
-    }
-
-    uBit.display.print(result);
-    uBit.sleep(1000);
-
-    // Write Buffer 2
-    for(uint32_t y = 0x20050; y < 0x20500; y = y +4){
-        result = flash.flash_write((uint32_t *)y, &buffer2, sizeof(buffer2));
-    }
-   
-    uBit.display.print(result);
-    uBit.sleep(1000);
-    
-    // Write Buffer 1
-    for(uint32_t x = 0x20300; x < 0x20700; x = x +4){
-        result = flash.flash_write((uint32_t *)x, &buffer1, sizeof(buffer1));
-    }
-
-    uBit.display.print(result);
-    uBit.sleep(1000);
-
-
-    uBit.display.print("D");
+    uBit.display.print("S");
 
     while(1);
      
